@@ -10,6 +10,7 @@ script:
  - docker run -e CI=true hazem-react npm run test
 
 deploy:
+ require: 'aws-sdk'
  skip_cleanup: true 
  provider: elasticbeanstalk
  region: us-east-2

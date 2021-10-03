@@ -10,14 +10,14 @@ script:
  - docker run -e CI=true hazem-react npm run test
 
 deploy:
- require: 'aws-sdk'
+ 
  skip_cleanup: true 
  provider: elasticbeanstalk
- region: us-east-2
- app: "dockerApplication"
+ region: eu-west-3
+ app: "DockerApplication"
  env: "Dockerapplication-env"
- bucket_name: "elasticbeanstalk-us-east-2-854620429039"
- bucket_path: "dockerApplication"
+ bucket_name: "elasticbeanstalk-eu-west-3-854620429039"
+ bucket_path: "DockerApplication"
  on:
   branch: master
  access_key_id: $AWS_ACCESS_KEY

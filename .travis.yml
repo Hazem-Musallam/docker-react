@@ -21,4 +21,5 @@ deploy:
  on:
   branch: master
  access_key_id: "$AWS_ACCESS_KEY"
- secret_access_key: $ENCRYPTED_VAR_SPELLED_WRONG
+ secret_access:
+  secure: $SECRET_ACCESS_KEY 

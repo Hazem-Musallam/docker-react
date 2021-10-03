@@ -11,9 +11,8 @@ script:
  - docker run -e CI=true hazem-react npm run test
 
 deploy: 
- skip_cleanup: true
  provider: elasticbeanstalk
- region: "us-east-2"
+ region: us-east-2
  app: "dockerApplication"
  env: "Dockerapplication-env"
  bucket_name: "elasticbeanstalk-us-east-2-854620429039"
@@ -21,4 +20,4 @@ deploy:
  on:
   branch: master
  access_key_id: "$AWS_ACCESS_KEY"
- secret_access_key: "$SECRET_ACCESS_KEY" 
+ secret_access_key: "$AWS_ACCESS_KEY" 

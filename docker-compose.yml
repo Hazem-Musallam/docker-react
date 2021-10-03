@@ -1,13 +1,9 @@
 version: '3'
 services: 
- front-app:
-  build : 
-   context: . 
-   dockerfile: Dockerfile-dev
-
-  restart: 'always'
-  volumes: 
-    - /home/node/app/node_modules
-    - .:/home/node/app 
-  ports:
-   - "3000:3000" 
+ web:
+  build:
+   context: .
+   dockerfile: Dockerfile
+ ports:
+  - '80:80'
+  
